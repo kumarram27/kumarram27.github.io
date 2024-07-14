@@ -10,7 +10,7 @@ export const navItems = [
       id: 1,
       title: "Hi, I'm Adrian",
       description: "I'm a Frontend Developer with a passion for creating beautiful and interactive user experiences.",
-      img: "/Data/pic.jpg",
+      img: "/pic.jpg",
     },
   
  ];
