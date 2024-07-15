@@ -1,13 +1,21 @@
 "use client";
 
-import { projects } from '@/Data'
-import React from 'react'
-import { PinContainer } from './ui/3d-pin';
-import { FaLocationArrow } from 'react-icons/fa6';
+import { projects } from "@/Data";
+import React from "react";
+import { PinContainer } from "./ui/3d-pin";
+import { FaLocationArrow } from "react-icons/fa6";
+import { LinkPreview } from "./ui/link-preview";
+import { motion } from "framer-motion";
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
+import Image from "next/image";
+import { encode } from "qss";
+import { AnimatePresence, useMotionValue, useSpring } from "framer-motion";
+import Link from "next/link";
+import { cn } from "@/utils/cn";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20" id ="projects">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -18,10 +26,7 @@ const RecentProjects = () => {
             className="sm:h-[41rem] h-[35rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             key={item.id}
           >
-            <PinContainer
-              title={item.title}
-              href={item.link}
-            >
+            <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-[560px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh]  mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -29,7 +34,7 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div>
-                <img 
+                <img
                   src={item.img}
                   alt="cover"
                   className="z-10 absolute bottom-0"
@@ -56,28 +61,21 @@ const RecentProjects = () => {
                     <div
                       key={index}
                       className=" lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      
                     >
                       <img src={icon} alt="icon5" className="p-1" />
                     </div>
                   ))}
-                  {/* {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))} */}
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
+                  <LinkPreview
+                    url={item.link}
+                      >
+                    <span className="flex lg:text-xl md:text-xs text-sm text-purple">
+                        Check Live Site
+                    </span>
+                  </LinkPreview>
+
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
               </div>
@@ -88,5 +86,6 @@ const RecentProjects = () => {
     </div>
   );
 };
+
 
 export default RecentProjects;
