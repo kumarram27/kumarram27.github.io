@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import { projects } from "@/Data";
 import React, { useState } from "react";
 import { PinContainer } from "./ui/3d-pin";
@@ -78,7 +79,7 @@ const RecentProjects = () => {
                 <div className="flex justify-center items-center">
                   <LinkPreview
                     url={item.link}
-                    onClick={() => handleClick(item.id)}
+                    onClick={() => handleClick(item.id.toString())}
                     style={
                       clickCounts[item.id] >= 2
                         ? { transform: "translate(-50%,-50%) rotateX(-40deg)" }
