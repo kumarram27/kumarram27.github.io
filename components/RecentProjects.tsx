@@ -1,7 +1,6 @@
-"use client";
-
+'use client';
 import { projects } from "@/Data";
-import React from "react";
+import React, { useState } from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { LinkPreview } from "./ui/link-preview";
@@ -14,6 +13,15 @@ import Link from "next/link";
 import { cn } from "@/utils/cn";
 
 const RecentProjects = () => {
+  const [clickCounts, setClickCounts] = useState<{ [key: string]: number }>({});
+
+  const handleClick = (id: string) => {
+    setClickCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: (prevCounts[id] || 0) + 1,
+    }));
+  };
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -70,9 +78,15 @@ const RecentProjects = () => {
                 <div className="flex justify-center items-center">
                   <LinkPreview
                     url={item.link}
-                      >
+                    onClick={() => handleClick(item.id)}
+                    style={
+                      clickCounts[item.id] >= 2
+                        ? { transform: "translate(-50%,-50%) rotateX(-40deg)" }
+                        : {}
+                    }
+                  >
                     <span className="flex lg:text-xl md:text-xs text-sm text-purple">
-                        Check Live Site
+                      Check Live Site
                     </span>
                   </LinkPreview>
 
@@ -86,6 +100,5 @@ const RecentProjects = () => {
     </div>
   );
 };
-
 
 export default RecentProjects;

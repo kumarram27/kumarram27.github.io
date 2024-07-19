@@ -1,5 +1,4 @@
 "use client";
-
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import Image from "next/image";
 import { encode } from "qss";
@@ -21,10 +20,11 @@ type LinkPreviewProps = {
   height?: number;
   quality?: number;
   layout?: string;
-} & (
-  | { isStatic: true; imageSrc: string }
-  | { isStatic?: false; imageSrc?: never }
-);
+  isStatic?: boolean;
+  imageSrc?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void; // Add onClick prop
+};
 
 export const LinkPreview = ({
   children,
@@ -36,6 +36,8 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
+  style = {},
+  onClick, // Destructure onClick
 }: LinkPreviewProps) => {
   let src;
   if (!isStatic) {
@@ -66,7 +68,7 @@ export const LinkPreview = ({
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
 
-  const translateX = useSpring(x, springConfig);
+  const rotateX = useSpring(x, springConfig);
 
   const handleMouseMove = (event: any) => {
     const targetRect = event.target.getBoundingClientRect();
@@ -100,6 +102,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
+          onClick={onClick} // Handle click
           className={cn("text-black dark:text-white", className)}
           href={url}
         >
@@ -111,6 +114,9 @@ export const LinkPreview = ({
           side="top"
           align="center"
           sideOffset={10}
+          style={{
+            transform: `rotateX(-${rotateX.get()}deg)`,
+          }}
         >
           <AnimatePresence>
             {isOpen && (
@@ -129,13 +135,13 @@ export const LinkPreview = ({
                 exit={{ opacity: 0, y: 20, scale: 0.6 }}
                 className="shadow-xl rounded-xl relative inline-flex overflow-hidden p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                 style={{
-                  x: translateX,
+                  ...style,
                 }}
               >
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFF_0%,#000_50%,#FFF_100%)]" />
                 <Link
                   href={url}
-                  className="block p-0.5 border-1 border-transparent shadow rounded-xl   relative overflow-hidden"
+                  className="block p-0.5 border-1 border-transparent shadow rounded-xl relative overflow-hidden"
                   style={{ fontSize: 0 }}
                 >
                   <Image

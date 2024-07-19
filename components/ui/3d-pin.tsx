@@ -37,7 +37,7 @@ export const PinContainer = ({
 
   const onMouseLeave = () => {
     if (clickCount >= 2) {
-      setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+      setTransform("translate(-50%,-50%) rotateX(0deg) scale(0.8)");
     }
   };
 
@@ -54,7 +54,7 @@ export const PinContainer = ({
       <div
         style={{
           perspective: "1000px",
-          transform: "rotateX(70deg) translateZ(0deg)",
+          transformStyle: "preserve-3d",
         }}
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
       >
