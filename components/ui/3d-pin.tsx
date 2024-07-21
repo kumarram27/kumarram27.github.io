@@ -7,13 +7,15 @@ import { cn } from "@/utils/cn";
 export const PinContainer = ({
   children,
   title,
-  href,
+  githubLink,
+  liveLink,
   className,
   containerClassName,
 }: {
   children: React.ReactNode;
   title?: string;
-  href?: string;
+  githubLink?: string;
+  liveLink?: string;
   className?: string;
   containerClassName?: string;
 }) => {
@@ -54,41 +56,48 @@ export const PinContainer = ({
           <div className={cn("relative", className)}>{children}</div>
         </div>
       </div>
-      {<PinPerspective title={title} href={href} />}
+      {
+        <PinPerspective
+          title={title}
+          githubLink={githubLink}
+          liveLink={liveLink}
+        />
+      }
     </div>
   );
 };
 
 export const PinPerspective = ({
   title,
-  href,
+  githubLink,
+  liveLink,
 }: {
   title?: string;
-  href?: string;
+  githubLink?: string;
+  liveLink?: string;
 }) => {
   return (
-    <motion.div className="pointer-events-none w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    <motion.div className=" w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">
         <div className="absolute top-0 inset-x-0 flex justify-center">
-          <a
-            href={href}
-            target={"_blank"}
-            className="relative flex space-x-2 items-center z-10 py-0.5 px-4"
-          >
-            <span>
-              <button className="inline-flex h-12 px-10 py-2.5 gap-2 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <span className="   bg-gradient-to-r from-emerald-400/0 via-blue-400/90  transition-opacity duration-500 group-hover/btn:opacity-40">
+            <a
+              href={githubLink}
+              target={"_blank"}
+              className="relative flex space-x-2 items-center z-10 py-0.5 px-4"
+            >
+              <button className="inline-flex h-12 px-10 py-2.5 gap-2 animate-shimmer items-center justify-center rounded-md border-2 border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-500-2">
                 <Image
-                  src="/code.png"
-                  height="1000"
-                  width="1000"
+                  src="/git.svg"
+                  height="24"
+                  width="24"
                   className="h-full w-full group-hover/card:shadow-xl"
                   alt="Code"
                 />
                 <h1>Code</h1>
               </button>
-            </span>
-            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
-          </a>
+            </a>
+          </span>
         </div>
       </div>
     </motion.div>

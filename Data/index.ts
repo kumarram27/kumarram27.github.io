@@ -83,9 +83,10 @@ export const projects = [
     id: 1,
     title: "3D Solar System Planets to Explore",
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://kumardev.me",
+    githubLink: "https://kumardev.me",
+    liveLink: "https://kumardev.me",
   },
   {
     id: 2,
@@ -93,7 +94,8 @@ export const projects = [
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://kumarram27.github.io/simplecollegeweb/",
+    githubLink: "https://kumardev.me",
+    liveLink: "https://kumarram27.github.io/simplecollegeweb/",
   },
   {
     id: 3,
@@ -101,7 +103,8 @@ export const projects = [
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://kumardev.me/pricetracker/",
+    githubLink: "https://kumardev.me",
+    liveLink: "https://kumardev.me/pricetracker/",
   },
   {
     id: 4,
@@ -109,7 +112,8 @@ export const projects = [
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://kumarram27.github.io/minipassgen/",
+    githubLink: "https://kumarram27.github.io/",
+    liveLink: "https://kumarram27.github.io/minipassgen/",
   },
 ];
 export const products = [

@@ -5,6 +5,7 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/Data";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <FloatingNav navItems={navItems} />
           <Hero />
           <RecentProjects />
+          <Footer />
         </div>
       </TracingBeam>
     </main>
