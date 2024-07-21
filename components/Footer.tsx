@@ -32,12 +32,12 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className="container flex mt-16 md:flex-row flex-col sm:justify-between justify-center gap-10 items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © {new Date().getFullYear()} KumarSatyaSriRam
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex  gap-6 flex-wrap">
           {socialMedia.map((info) => (
             <div
               key={info.id}
