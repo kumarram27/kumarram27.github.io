@@ -1,4 +1,7 @@
+import { url } from "inspector";
+
 export const navItems = [
+  { name:"Home", icon: "/home.svg", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
@@ -9,7 +12,7 @@ export const navItems = [
       id: 1,
       title: "Hi, I'm Kumar",
       description: "I'm a Frontend Developer with a passion for creating beautiful and interactive user experiences.",
-      img: "/pic.jpg",
+      img: "",
     },
   
  ];
@@ -84,132 +87,138 @@ export const projects = [
     des: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
     img: "/p1.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    githubLink: "https://kumardev.me",
+    githubLink: "https://github.com/kumarram27",
     liveLink: "https://kumardev.me",
   },
   {
     id: 2,
     title: "MyGvp CLI",
     des: "A CLI tool to automate the process of searching the results in college website.",
-    img: "/p2.svg",
-    iconLists: ["/js.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    githubLink: "https://kumardev.me",
-    liveLink: "https://kumarram27.github.io/simplecollegeweb/",
+    img: "",
+    iconLists: [
+      "/javascript.svg",
+      "/nodejs-icon.svg",
+      "/ssh.svg",
+      "/npmjs-tile.svg",
+    ],
+    githubLink: "https://github.com/kumarram27/gvp",
+    liveLink: "https://www.npmjs.com/package/mygvp",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    githubLink: "https://kumardev.me",
-    liveLink: "https://kumardev.me/pricetracker/",
+    title: "MyGvp Extension",
+    des: "A browser extension to automate the process of searching the results in college website.",
+    img: "/",
+    iconLists: ["/re.svg", "/vite.svg", "/javascript.svg","/vercel2.svg",],
+    githubLink: "https://github.com/kumarram27/MyGvp-Extention",
+    liveLink:
+      "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
   },
   {
     id: 4,
     title: "Animated Apple Iphone 3D Website",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    img: "",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     githubLink: "https://kumarram27.github.io/",
     liveLink: "https://kumarram27.github.io/minipassgen/",
   },
 ];
-export const products = [
-  {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-  },
-  {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
+// export const products = [
+//   {
+//     title: "Moonbeam",
+//     link: "https://gomoonbeam.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+//   },
+//   {
+//     title: "Cursor",
+//     link: "https://cursor.so",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+//   },
+//   {
+//     title: "Rogue",
+//     link: "https://userogue.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+//   },
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
+//   {
+//     title: "Editorially",
+//     link: "https://editorially.org",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+//   },
+//   {
+//     title: "Editrix AI",
+//     link: "https://editrix.ai",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+//   },
+//   {
+//     title: "Pixel Perfect",
+//     link: "https://app.pixelperfect.quest",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+//   },
 
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
+//   {
+//     title: "Algochurn",
+//     link: "https://algochurn.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+//   },
+//   {
+//     title: "Aceternity UI",
+//     link: "https://ui.aceternity.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+//   },
+//   {
+//     title: "Tailwind Master Kit",
+//     link: "https://tailwindmasterkit.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+//   },
+//   {
+//     title: "SmartBridge",
+//     link: "https://smartbridgetech.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+//   },
+//   {
+//     title: "Renderwork Studio",
+//     link: "https://renderwork.studio",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+//   },
 
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
-];
+//   {
+//     title: "Creme Digital",
+//     link: "https://cremedigital.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+//   },
+//   {
+//     title: "Golden Bells Academy",
+//     link: "https://goldenbellsacademy.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+//   },
+//   {
+//     title: "Invoker Labs",
+//     link: "https://invoker.lol",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+//   },
+//   {
+//     title: "E Free Invoice",
+//     link: "https://efreeinvoice.com",
+//     thumbnail:
+//       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+//   },
+// ];
 
 // export const testimonials = [
 //   {
@@ -312,6 +321,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    url: "",
   },
   {
     id: 2,

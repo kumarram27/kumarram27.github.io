@@ -25,7 +25,7 @@ const RecentProjects = () => {
             >
               <div className="relative flex items-center justify-center sm:w-[460px] w-[75vw] overflow-hidden sm:h-[30vh] h-full  mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden  lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 > 
                 <img src="/bg.png"   alt="bgimg" />
@@ -33,7 +33,7 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className=" absolute bottom-0  "
                 />
               </div>
 
@@ -58,7 +58,7 @@ const RecentProjects = () => {
                       key={index}
                       className=" lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img src={icon} alt="icon" className="p-1" />
+                      <img src={icon} alt="icon" className="p-1 h-8" />
                     </div>
                   ))}
                 </div>
