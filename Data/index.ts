@@ -1,7 +1,7 @@
 import { url } from "inspector";
 
 export const navItems = [
-  { name:"Home", icon: "/home.svg", link: "#home" },
+  { name:"Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
@@ -321,7 +321,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    url: "",
+    url: "https://github.com/kumarram27",
   },
   {
     id: 2,
@@ -330,5 +330,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+    url: "https://www.linkedin.com/in/kumarram27/",
   },
 ];
