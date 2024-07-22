@@ -1,7 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -81,19 +80,19 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    title: "Portfolio Website",
+    des: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
     img: "/p1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
     githubLink: "https://kumardev.me",
     liveLink: "https://kumardev.me",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    title: "MyGvp CLI",
+    des: "A CLI tool to automate the process of searching the results in college website.",
     img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/js.svg", "/tail.svg", "/ts.svg", "/c.svg"],
     githubLink: "https://kumardev.me",
     liveLink: "https://kumarram27.github.io/simplecollegeweb/",
   },
