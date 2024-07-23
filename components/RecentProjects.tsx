@@ -58,7 +58,7 @@ const RecentProjects = () => {
                       key={index}
                       className=" lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img src={icon} alt="icon" className="p-1 h-8" />
+                      <img src={icon}  alt="icon" className="p-1 h-8" />
                     </div>
                   ))}
                 </div>

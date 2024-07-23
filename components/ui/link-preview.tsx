@@ -105,6 +105,7 @@ export const LinkPreview = ({
           onClick={onClick} // Handle click
           className={cn("text-black dark:text-white", className)}
           href={url}
+          target={"_blank"}
         >
           {children}
         </HoverCardPrimitive.Trigger>
