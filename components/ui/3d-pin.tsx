@@ -79,7 +79,7 @@ export const PinPerspective = ({
   return (
     <motion.div className=" w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">
-        <div className="absolute top-0 inset-x-0 flex justify-center">
+        <div className="absolute  inset-x-0 flex justify-center">
           <span className="   bg-gradient-to-r from-emerald-400/0 via-blue-400/90  transition-opacity duration-500 group-hover/btn:opacity-40">
             <a
               href={githubLink}
