@@ -74,14 +74,16 @@ export const TracingBeam = ({
           />
         </motion.div>
         <svg
-          viewBox={`0 0 20 ${svgHeight}`}
-          width="20"
+          viewBox={`0 0 40 ${svgHeight}`}
+          width="40"
           height={svgHeight} // Set the SVG height
           className="ml-1.5"
           aria-hidden="true"
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 19 0V -36 l -18 24 h 20 V ${
+              svgHeight * 0.8
+            } l 18 24  V ${svgHeight}`}
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.16"
@@ -90,7 +92,9 @@ export const TracingBeam = ({
             }}
           ></motion.path>
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 19 0V -36 l -18 24 h 20 V ${
+              svgHeight * 0.8
+            } l 18 24 V ${svgHeight}`}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.25"
