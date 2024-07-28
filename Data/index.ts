@@ -330,7 +330,7 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    url: "https://www.linkedin.com/in/kumarram27/",
+    url: "https://www.linkedin.com/in/kumarsatyasriram/",
   },
 ];
 
