@@ -23,18 +23,29 @@ const RecentProjects = () => {
               githubLink={item.githubLink}
               liveLink={item.liveLink}
             >
-              <div className="relative flex items-center justify-center sm:w-[460px] w-[75vw] overflow-hidden sm:h-[30vh] h-full  mb-10">
+              <div className="relative flex items-center justify-center sm:w-[460px] w-[75vw] overflow-hidden sm:h-[30vh] h-full mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden  lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
-                > 
-                <img src="/bg.png"   alt="bgimg" />
+                >
+                  {item.video ? (
+                    <video
+                      src={item.video}
+                      className="absolute top-0 left-0 w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      preload="false"
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={item.img}
+                      alt="cover"
+                      className="absolute top-0 left-0 w-full h-full object-cover"
+                    />
+                  )}
                 </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className=" absolute top-0 left-0 w-full h-full object-cover"
-                />
               </div>
 
               <h1 className="font-bold lg:text-xl md:text-l text-base line-clamp-1">
@@ -56,9 +67,9 @@ const RecentProjects = () => {
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className=" lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img src={icon}  alt="icon" className="p-1 h-8" />
+                      <img src={icon} alt="icon" className="p-1 h-8" />
                     </div>
                   ))}
                 </div>

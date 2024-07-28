@@ -95,6 +95,7 @@ export const projects = [
     title: "MyGvp CLI",
     des: "A CLI tool to automate the process of searching the results in college website.",
     img: "/cli.png",
+    video: "/mygvpcli.webm",
     iconLists: [
       "/javascript.svg",
       "/nodejs-icon.svg",
@@ -109,6 +110,7 @@ export const projects = [
     title: "MyGvp Extension",
     des: "A browser extension to automate the process of searching the results in college website.",
     img: "/ex.png",
+    video: "/mygvpex.webm",
     iconLists: ["/re.svg", "/vite.svg", "/javascript.svg","/vercel2.svg",],
     githubLink: "https://github.com/kumarram27/MyGvp-Extention",
     liveLink:
