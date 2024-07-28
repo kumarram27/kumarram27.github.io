@@ -23,7 +23,7 @@ const RecentProjects = () => {
               githubLink={item.githubLink}
               liveLink={item.liveLink}
             >
-              <div className="relative flex items-center justify-center sm:w-[460px] w-[75vw] overflow-hidden sm:h-[30vh] h-full mb-10">
+              <div className="relative flex items-center justify-center sm:w-[460px] w-[75vw] overflow-hidden sm:h-[30vh] h-[20vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
