@@ -30,28 +30,36 @@ const Skills = () => {
           />
         ))}
       </div> */}
-
+      <div className="sm:hidden block ">
+        <h1 className="text-white text-3xl font-bold mt-10 ">Front end</h1>
+      </div>
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width + 10}
+            height={image.height + 10}
             index={index}
           />
         ))}
+      </div>
+      <div className="sm:hidden block ">
+        <h1 className="text-white text-3xl font-bold mt-10 ">Back end</h1>
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Backend_skill.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
-            width={image.width}
-            height={image.height}
+            width={image.width + 10}
+            height={image.height + 10}
             index={index}
           />
         ))}
+      </div>
+      <div className="sm:hidden block ">
+        <h1 className="text-white text-3xl font-bold mt-10 ">Others</h1>
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Full_stack.map((image, index) => (
@@ -76,7 +84,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="w-full h-full absolute hidden sm:block">
+      <div className="w-full h-full absolute hidden md:block">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
           <video
             className="w-full h-auto"
