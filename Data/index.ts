@@ -116,15 +116,15 @@ export const projects = [
     liveLink:
       "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
   },
-  {
-    id: 4,
-    title: "",
-    des: "",
-    img: "",
-    iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    githubLink: "https://kumarram27.github.io/",
-    liveLink: "https://kumarram27.github.io/minipassgen/",
-  },
+  // {
+  //   id: 4,
+  //   title: "",
+  //   des: "",
+  //   img: "",
+  //   iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+  //   githubLink: "https://kumarram27.github.io/",
+  //   liveLink: "https://kumarram27.github.io/minipassgen/",
+  // },
 ];
 // export const products = [
 //   {
