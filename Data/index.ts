@@ -7,15 +7,14 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-//  export const heroData = [
-//     {
-//       id: 1,
-//       title: "Hi, I'm Kumar",
-//       description: "I'm a Frontend Developer with a passion for creating beautiful and interactive user experiences.",
-//       img: "",
-//     },
-  
-//  ];
+ export const heroData = [
+    {
+      id: 1,
+      title: "Hi, I'm Kumar",
+      description: "I'm a Frontend Developer with a passion for creating beautiful and interactive user experiences.",
+      img: "",
+    },
+ ];
 // export const gridItems = [
 //   {
 //     id: 1,
