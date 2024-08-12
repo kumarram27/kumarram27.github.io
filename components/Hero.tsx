@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none" />
       <div className="relative z-10 flex flex-col items-center justify-center max-w-[89vw] text-center">
         <h2 className="uppercase tracking-widest text-xs text-blue-100 mb-2">
-          Dynamic Portfolio
+          Kumar Satya Sri Ram
         </h2>
         <TextGenerateEffect
           className="text-[40px] md:text-5xl lg:text-6xl"
