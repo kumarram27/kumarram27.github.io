@@ -19,13 +19,14 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center max-w-[89vw] text-center">
         <h2 className="uppercase tracking-widest text-xs text-blue-100 mb-2">
           Kumar Satya Sri Ram
-        </h2>
-        <TextGenerateEffect
-          className="text-[40px] md:text-5xl lg:text-6xl"
-          words="Transforming Concepts into Seamless Experiences"
-        />
+        {/* <TextGenerateEffect
+          // className="text-[40px] md:text-5xl lg:text-6xl"
+          className="uppercase tracking-widest text-xs text-blue-100 mb-2"
+          words="Kumar Satya Sri Ram Boppana"
+          /> */}
+          </h2>
         <p className="md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-          Hi, I&apos;m Kumar, a Next.js Developer based in India
+          Hello, I&apos;m Kumar, a Developer Based in India.
         </p>
         <a href="#projects">
           <MagicButton
