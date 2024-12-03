@@ -82,12 +82,14 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    des: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
+    title: "PassEx",
+    des: "Pass-EX is a secure and user-friendly password generator designed to create strong, random passwords and ensuring enhanced security for your accounts.",
     img: "/p1.png",
-    iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    githubLink: "https://github.com/kumarram27",
-    liveLink: "https://kumardev.me",
+    video: "/passx.webm",
+    iconLists: ["/re.svg", "/vite.svg", "/javascript.svg"],
+    githubLink: "https://github.com/kumarram27/pass-ex",
+    liveLink:
+      "https://microsoftedge.microsoft.com/addons/detail/passex/dmcifioindjojcfphmoeeakdjdjmdkkh",
   },
   {
     id: 2,
@@ -110,20 +112,20 @@ export const projects = [
     des: "A browser extension to automate the process of searching the results in college website.",
     img: "/ex.png",
     video: "/mygvpex.webm",
-    iconLists: ["/re.svg", "/vite.svg", "/javascript.svg","/vercel2.svg",],
+    iconLists: ["/re.svg", "/vite.svg", "/mongodb.png", "/vercel2.svg"],
     githubLink: "https://github.com/kumarram27/MyGvp-Extention",
     liveLink:
       "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
   },
-  // {
-  //   id: 4,
-  //   title: "",
-  //   des: "",
-  //   img: "",
-  //   iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-  //   githubLink: "https://kumarram27.github.io/",
-  //   liveLink: "https://kumarram27.github.io/minipassgen/",
-  // },
+  {
+    id: 1,
+    title: "Portfolio Website",
+    des: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
+    img: "/p1.png",
+    iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
+    githubLink: "https://github.com/kumarram27",
+    liveLink: "https://kumardev.me",
+  },
 ];
 // export const products = [
 //   {
