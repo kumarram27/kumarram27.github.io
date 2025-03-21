@@ -328,7 +328,8 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/email.svg",
+    url: "mailto:kumar27.dev@gmail.com",
   },
   {
     id: 3,
