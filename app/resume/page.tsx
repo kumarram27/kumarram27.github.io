@@ -14,13 +14,6 @@ export default function Resume() {
           className="w-full max-w-4xl h-[90vh] border border-gray-300 rounded-lg shadow-lg"
         ></iframe>
       </div>
-      <a
-        href="/Resume.pdf"
-        download
-        className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-      >
-        Download Resume
-      </a>
     </main>
   );
 }

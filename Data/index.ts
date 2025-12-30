@@ -117,15 +117,6 @@ export const projects = [
     liveLink:
       "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
   },
-  {
-    id: 1,
-    title: "Portfolio Website",
-    des: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
-    img: "/p1.png",
-    iconLists: ["/next2.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    githubLink: "https://github.com/kumarram27",
-    liveLink: "https://kumardev.me",
-  },
 ];
 // export const products = [
 //   {

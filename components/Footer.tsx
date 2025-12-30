@@ -5,30 +5,21 @@ import MagicButton from "@/components/ui/MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer
+      className="relative w-full pt-20 pb-10 overflow-hidden"
+      id="contact"
+    >
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="absolute left-0 bottom-0 min-h-96 w-full pointer-events-none">
         <img
           src="/footer-grid.svg"
           alt="grid"
-          className="w-full h-full opacity-50 "
+          className="w-full h-full opacity-50"
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        {/* <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p> */}
-        <a
-          href="/resume"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div className="relative flex flex-col items-center">
+        <a href="/resume" target="_blank" rel="noopener noreferrer">
           <MagicButton
             title="View my Resume"
             icon={<FaLocationArrow />}
@@ -36,16 +27,17 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="container flex mt-16 md:flex-row flex-col sm:justify-between justify-center gap-10 items-center">
+
+      <div className="relative container flex mt-16 md:flex-row flex-col sm:justify-between justify-center gap-10 items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © {new Date().getFullYear()} KumarSatyaSriRam
         </p>
 
-        <div className="flex  gap-6 flex-wrap">
+        <div className="flex gap-6 flex-wrap">
           {socialMedia.map((info) => (
             <div
               key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:border-purple hover:border-opacity-50 hover:scale-125 transition-all"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-blur-lg bg-black-200 rounded-lg border border-black-300 hover:border-purple hover:scale-125 transition-all"
             >
               <a href={info.url} target="_blank" rel="noreferrer">
                 <img src={info.img} alt="icons" width={20} height={20} />
@@ -57,5 +49,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
