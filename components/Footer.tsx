@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       <div className="relative flex flex-col items-center">
-        <a href="/resume" target="_blank" rel="noopener noreferrer">
+        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
           <MagicButton
             title="View my Resume"
             icon={<FaLocationArrow />}
