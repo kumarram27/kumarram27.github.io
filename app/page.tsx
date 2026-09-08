@@ -5,6 +5,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <div className="max-w-8xl w-full relative">
           <Hero />
           <Skills />
+          <Experience />
           <RecentProjects />
           <Footer />
         </div>

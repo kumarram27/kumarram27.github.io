@@ -67,21 +67,37 @@
 }
 
 @layer base {
-  html,
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    background: #000319;
+  }
+
   body {
     width: 100%;
     max-width: 100%;
-    overflow-x: clip;
+    overflow: clip;
+    background: #000319;
   }
 
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
   button {
     @apply active:outline-none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 

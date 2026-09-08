@@ -1,8 +1,7 @@
-import { url } from "inspector";
-
 export const navItems = [
-  { name:"Home", link: "#home" },
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
@@ -116,6 +115,31 @@ export const projects = [
     githubLink: "https://github.com/kumarram27/MyGvp-Extention",
     liveLink:
       "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
+  },
+];
+
+export const experiences = [
+  {
+    company: "FlintLab Inc.",
+    role: "Software Development Engineer & Founding Engineer",
+    period: "Jul 2025 - Present",
+    highlights: [
+      "Built backend services for a device testing platform supporting 100+ Android and 50+ iOS devices.",
+      "Developed Python/FastAPI services with Redis Pub/Sub for 20+ parallel test executions.",
+      "Extended Android and iOS streaming, recording, device interaction, and session lifecycle workflows.",
+      "Built an ADB Logcat pipeline with Fluent Bit and Elasticsearch, reducing representative log volume from 98K to 20K lines.",
+      "Implemented Auth0 authentication, RBAC, API gateway validation, and production HTTPS routing.",
+    ],
+  },
+  {
+    company: "FlintLab Inc.",
+    role: "Software Development Engineer Intern",
+    period: "Mar 2025 - Jun 2025",
+    highlights: [
+      "Reduced redundant frontend API calls by 30% through state management and Redis caching.",
+      "Contributed to a SPA migration that reduced observed routing time from 300 ms to 20 ms.",
+      "Migrated Next.js API calls to server-side execution and contributed to Appium automation workflows for Android and iOS.",
+    ],
   },
 ];
 // export const products = [
@@ -558,8 +582,6 @@ export const Full_stack = [
     width: 70,
     height: 70,
   },
-
-  
 ];
 
 export const Other_skill = [
@@ -576,5 +598,3 @@ export const Other_skill = [
   //   height: 60,
   // },
 ];
-  
-  
