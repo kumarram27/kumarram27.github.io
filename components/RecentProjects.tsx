@@ -1,11 +1,12 @@
 "use client";
 import { projects } from "@/Data";
+import Link from "next/link";
 import React from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { LinkPreview } from "./ui/link-preview";
 
-const RecentProjects = () => {
+const RecentProjects = ({ limit = projects.length }: { limit?: number }) => {
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -13,7 +14,7 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map((item) => (
+        {projects.slice(0, limit).map((item) => (
           <div
             className="sm:h-[35rem] h-[30rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             key={item.id}
@@ -87,6 +88,16 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
+      {limit < projects.length && (
+        <div className="mt-4 flex justify-center">
+          <Link
+            href="/projects"
+            className="text-purple transition-colors hover:text-white"
+          >
+            View all projects
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

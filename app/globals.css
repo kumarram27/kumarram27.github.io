@@ -75,21 +75,31 @@
     overscroll-behavior-y: none;
     scroll-behavior: smooth;
     background: #000319;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
 
   body {
     width: 100%;
     max-width: 100%;
-    overflow: clip;
+    overflow-x: hidden;
     background: #000319;
   }
 
   * {
     @apply border-border;
   }
+
   body {
     @apply text-foreground;
   }
+
   button {
     @apply active:outline-none;
   }
