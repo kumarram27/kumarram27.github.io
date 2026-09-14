@@ -1,3 +1,5 @@
+// ChatInput component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { ChatRequestOptions, Message } from "ai";
 import { SendHorizontal, Trash } from "lucide-react";
 import { HTMLAttributes } from "react";
@@ -76,4 +78,9 @@ export default function ChatInput({
       </Button>
     </form>
   );
+}
+*/
+
+export default function ChatInput(_props: any) {
+  return null;
 }

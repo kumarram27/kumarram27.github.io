@@ -1,3 +1,5 @@
+// Chat component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { useChatbot } from "@/contexts/ChatContext";
 import { Suspense, lazy, useCallback, useState } from "react";
 import ChatHeader from "./ChatHeader";
@@ -100,4 +102,9 @@ export default function Chat() {
       </Accordion>
     )
   );
+}
+*/
+
+export default function Chat() {
+  return null;
 }

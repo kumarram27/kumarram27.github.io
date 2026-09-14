@@ -1,5 +1,7 @@
 "use client";
 
+// ChatToggle component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { useChatbot } from "@/contexts/ChatContext";
 import { Bot, BotOff } from "lucide-react";
 import { Button } from "./ui/Button";
@@ -13,4 +15,9 @@ export default function ChatToggle() {
       <span className="sr-only">Chat Toggle</span>
     </Button>
   );
+}
+*/
+
+export default function ChatToggle() {
+  return null;
 }

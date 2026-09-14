@@ -1,3 +1,5 @@
+// ChatMessage component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { cn } from "@/lib/utils";
 import { Message } from "ai";
 import { Bot } from "lucide-react";
@@ -52,4 +54,9 @@ export default function ChatMessage({
       </div>
     </div>
   );
+}
+*/
+
+export default function ChatMessage(_props: any) {
+  return null;
 }

@@ -1,3 +1,5 @@
+// ChatMessages component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { Message } from "ai";
 import { Bot, Loader2 } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -44,7 +46,6 @@ export default function ChatMessages({
         ))}
       </ul>
 
-      {/* empty */}
       {!error && messages.length === 0 && (
         <div className="flex h-full flex-col items-center justify-center gap-2 p-3 sm:gap-3 sm:p-4">
           <Bot className="size-6 sm:size-8" />
@@ -62,7 +63,6 @@ export default function ChatMessages({
         </div>
       )}
 
-      {/* loading */}
       {isLoading && isLastMessageUser && (
         <div className="flex items-center justify-center">
           <Loader2 className="mr-1.5 size-3 animate-spin text-muted-foreground" />
@@ -72,7 +72,6 @@ export default function ChatMessages({
         </div>
       )}
 
-      {/* error */}
       {error && (
         <p className="text-center text-xs text-rose-500">
           Something went wrong. Please try again! {error.message}
@@ -80,4 +79,9 @@ export default function ChatMessages({
       )}
     </div>
   );
+}
+*/
+
+export default function ChatMessages(_props: any) {
+  return null;
 }

@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
+import AnimatedFavicon from "@/components/AnimatedFavicon";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import { Calistoga, Inter } from "next/font/google";
@@ -21,13 +22,6 @@ export const metadata: Metadata = {
   title: "Boppana Kumar Satya Sri Ram | Full-Stack Software Engineer",
   description:
     "Full-Stack Software Engineer with startup experience building production web, backend, and real-time systems using Next.js, React, Python, FastAPI, Redis, and Docker.",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
   manifest: "/manifest.json",
 };
 
@@ -50,6 +44,7 @@ export default function RootLayout({
           calistoga.variable,
         )}
       >
+        <AnimatedFavicon />
         <Providers>
           <Header />
           <div className="mx-auto flex max-w-3xl flex-col px-8">

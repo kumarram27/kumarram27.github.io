@@ -1,5 +1,7 @@
 "use client";
 
+// ChatPanel component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 import { useChat } from "ai/react";
 import { useCallback, useEffect, useRef, type ChangeEvent } from "react";
 import ChatInput from "./ChatInput";
@@ -138,4 +140,9 @@ export default function ChatPanel({ isExpanded }: ChatPanelProps) {
       />
     </>
   );
+}
+*/
+
+export default function ChatPanel(_props: { isExpanded: boolean }) {
+  return null;
 }

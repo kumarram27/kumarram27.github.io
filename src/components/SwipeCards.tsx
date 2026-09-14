@@ -1,11 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import { animate, motion, useMotionValue, useTransform } from "framer-motion";
-import { RefreshCw } from "lucide-react";
+import {
+  animate,
+  motion,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 import Image from "next/image";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface SwipeCardsProps {
   className?: string;
@@ -30,12 +33,21 @@ const cardData: Card[] = [
   },
 ];
 
+const AUTO_SWIPE_DELAY = 8000;
+
 const SwipeCards = ({ className }: SwipeCardsProps) => {
   const [cards, setCards] = useState<Card[]>(cardData);
+
+  // Ref so the timer can trigger the current front card
+  const frontCardRef = useRef<number | null>(null);
 
   const resetCards = () => {
     setCards(cardData);
   };
+
+  useEffect(() => {
+    frontCardRef.current = cards[cards.length - 1]?.id ?? null;
+  }, [cards]);
 
   return (
     <div
@@ -44,16 +56,9 @@ const SwipeCards = ({ className }: SwipeCardsProps) => {
         className,
       )}
     >
-      {cards.length === 0 && (
-        <div style={{ gridRow: 1, gridColumn: 1 }} className="z-20">
-          <Button onClick={resetCards} variant="outline" size="sm">
-            <RefreshCw className="mr-1.5 size-3.5" />
-            Again
-          </Button>
-        </div>
-      )}
       {cards.map((card, index) => {
         const depth = cards.length - 1 - index;
+
         return (
           <CardItem
             key={card.id}
@@ -79,25 +84,63 @@ const CardItem = ({
   id: number;
   url: string;
   alt: string;
-  setCards: Dispatch<SetStateAction<Card[]>>;
+  setCards: React.Dispatch<React.SetStateAction<Card[]>>;
   cards: Card[];
   depth: number;
 }) => {
   const x = useMotionValue(0);
 
-  const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
-  const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0]);
+  const [isAutoSwiping, setIsAutoSwiping] = useState(false);
 
-  const isFront = id === cards[cards.length - 1]?.id;
+  const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
+
+  const opacity = useTransform(
+    x,
+    [-100, 0, 100],
+    [0, 1, 0],
+  );
+
+  const isFront =
+    id === cards[cards.length - 1]?.id;
 
   const rotate = useTransform(() => {
     const offset = isFront ? 0 : id % 2 ? 6 : -6;
+
     return `${rotateRaw.get() + offset}deg`;
   });
 
-  const handleDragEnd = (_event: any, info: { offset: { x: number } }) => {
+  /*
+   * Move the current card to the back.
+   */
+  const moveToBack = () => {
+    setCards((pv) => {
+      const front = pv[pv.length - 1];
+
+      if (!front) return pv;
+
+      return [front, ...pv.slice(0, -1)];
+    });
+
+    x.set(0);
+    setIsAutoSwiping(false);
+  };
+
+  /*
+   * Manual swipe
+   */
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: { offset: { x: number } },
+  ) => {
     if (Math.abs(info.offset.x) > 100) {
-      setCards((pv) => pv.filter((v) => v.id !== id));
+      const direction =
+        info.offset.x > 0 ? 1 : -1;
+
+      animate(x, direction * 180, {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      }).then(moveToBack);
     } else {
       animate(x, 0, {
         type: "spring",
@@ -106,6 +149,25 @@ const CardItem = ({
       });
     }
   };
+
+  /*
+   * Automatic swipe.
+   */
+  useEffect(() => {
+    if (!isFront) return;
+
+    const timer = setTimeout(() => {
+      setIsAutoSwiping(true);
+
+      animate(x, 180, {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      }).then(moveToBack);
+    }, AUTO_SWIPE_DELAY);
+
+    return () => clearTimeout(timer);
+  }, [isFront, x]);
 
   return (
     <motion.div
@@ -121,27 +183,33 @@ const CardItem = ({
           : undefined,
       }}
       animate={{
-        scale: isFront ? 1 : Math.max(0.88, 0.95 - depth * 0.05),
+        scale: isFront
+          ? 1
+          : Math.max(0.88, 0.95 - depth * 0.05),
       }}
-      drag={isFront ? "x" : false}
+      drag={
+        isFront && !isAutoSwiping
+          ? "x"
+          : false
+      }
       dragConstraints={{
         left: -150,
         right: 150,
         top: 0,
         bottom: 0,
       }}
+      dragElastic={0.7}
       onDragEnd={handleDragEnd}
     >
-      {/* Pure full-bleed photo */}
       <Image
         src={url}
         alt={alt}
         fill
         sizes="(max-width: 640px) 210px, 240px"
         quality={85}
+        loading={isFront ? "eager" : "lazy"}
         draggable={false}
         className="pointer-events-none select-none object-cover"
-        priority={isFront}
       />
     </motion.div>
   );

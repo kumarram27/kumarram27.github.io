@@ -1,3 +1,5 @@
+// ChatHeader component (Disabled / Commented out - AI chatbot is currently inactive)
+/*
 export default function ChatHeader() {
   return (
     <section className="flex w-full items-center justify-start gap-3">
@@ -10,4 +12,9 @@ export default function ChatHeader() {
       </div>
     </section>
   );
+}
+*/
+
+export default function ChatHeader() {
+  return null;
 }
