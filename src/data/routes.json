@@ -1,0 +1,42 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "name": "home",
+      "description": "Portfolio overview, experience, skills, and featured projects",
+      "showInNav": true
+    },
+    {
+      "path": "/projects",
+      "name": "projects",
+      "description": "Portfolio projects showcase",
+      "showInNav": true
+    },
+    {
+      "path": "/blog",
+      "name": "blog",
+      "description": "Blog posts and technical notes",
+      "showInNav": true
+    },
+    {
+      "path": "/contact",
+      "name": "contact",
+      "description": "Contact form",
+      "showInNav": true
+    },
+    {
+      "path": "/Resume.pdf",
+      "name": "resume",
+      "description": "Kumar's resume CV in PDF format",
+      "showInNav": false
+    }
+  ],
+  "externalLinks": [
+    {
+      "path": "https://www.linkedin.com/in/kumarsatyasriram/",
+      "name": "linkedin",
+      "description": "Kumar's LinkedIn profile",
+      "isExternal": true
+    }
+  ]
+}

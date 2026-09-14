@@ -1,0 +1,31 @@
+{
+  "career": [
+    {
+      "name": "FlintLab Inc.",
+      "href": "https://flintlab.io",
+      "logo": "/FlintLab.svg",
+      "positions": [
+        {
+          "title": "Software Development Engineer & Founding Engineer",
+          "start": "Jul 2025",
+          "description": [
+            "Early-stage startup building an AI-powered device infrastructure PaaS unifying real and virtual device execution (one of the first engineers hired).",
+            "Built production Python/FastAPI services with Redis Pub/Sub for event-driven communication, supporting 150+ Android and iOS devices across allocation, automation, logging, and session workflows.",
+            "Designed and led the iOS platform implementation, owning streaming, device interaction, recording, and IPA resigning infrastructure from scratch for 50+ iOS devices.",
+            "Built the log-embedding pipeline for an internal AI-powered RCA system, using vector-database retrieval to analyze distributed microservice logs and surface relevant failure patterns.",
+            "Built an Android observability pipeline using ADB Logcat, Redis Pub/Sub, Fluent Bit, and Elasticsearch, reducing representative log volume by ~80% (98K → 20K lines) with retention controls."
+          ]
+        },
+        {
+          "title": "Software Development Engineer Intern",
+          "start": "Mar 2025",
+          "end": "Jun 2025",
+          "description": [
+            "Reduced redundant frontend API calls by 30% using state management and Redis caching; contributed to an SPA migration reducing observed routing time from 300 ms to 20 ms.",
+            "Migrated Next.js data fetching from client-side to server-side execution, improving data-access control and reducing backend interaction exposure in the browser."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "name": "MyGvp CLI",
+      "description": "Designed and built a Node.js CLI tool used by 500+ students, processing 1,000+ academic result queries with versioned releases distributed through the npm ecosystem.",
+      "href": "https://www.npmjs.com/package/mygvp",
+      "image": "/cli.png",
+      "video": "/mygvpcli.webm",
+      "tags": ["Node.js", "JavaScript", "CLI", "Automation", "npm"],
+      "links": [
+        {
+          "name": "npm Package",
+          "href": "https://www.npmjs.com/package/mygvp",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/kumarram27/gvp",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "MyGvp Browser Extension",
+      "description": "A browser extension designed for 500+ students to automate accessing, searching, and viewing examination results directly on the college portal.",
+      "href": "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
+      "image": "/ex.png",
+      "video": "/mygvpex.webm",
+      "tags": ["Node.js", "React", "Vite", "MongoDB", "Browser Extension"],
+      "links": [
+        {
+          "name": "Edge Store",
+          "href": "https://microsoftedge.microsoft.com/addons/detail/mygvp-extension/banjhoagimjlnagailpnofkgdadghhed",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/kumarram27/MyGvp-Extention",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "PassEx",
+      "description": "A secure and user-friendly password generator extension designed to create strong, cryptographically random passwords with customizable parameters.",
+      "href": "https://microsoftedge.microsoft.com/addons/detail/passex/dmcifioindjojcfphmoeeakdjdjmdkkh",
+      "image": "/p1.png",
+      "video": "/passx.webm",
+      "tags": ["React", "Vite", "JavaScript", "Security", "Browser Extension"],
+      "links": [
+        {
+          "name": "Edge Store",
+          "href": "https://microsoftedge.microsoft.com/addons/detail/passex/dmcifioindjojcfphmoeeakdjdjmdkkh",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/kumarram27/pass-ex",
+          "icon": "github"
+        }
+      ]
+    }
+  ]
+}

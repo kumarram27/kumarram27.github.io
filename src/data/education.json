@@ -1,0 +1,21 @@
+{
+  "education": [
+    {
+      "name": "Gayatri Vidya Parishad College of Engineering (GVPCE)",
+      "href": "https://www.gvpce.ac.in",
+      "logo": "/gvp.png",
+      "positions": [
+        {
+          "title": "Bachelor of Technology in Computer Science and Technology",
+          "start": "2021",
+          "end": "2025",
+          "description": [
+            "Visakhapatnam, Andhra Pradesh, India",
+            "CGPA: 8 / 10"
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

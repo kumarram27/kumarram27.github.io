@@ -1,0 +1,19 @@
+{
+  "socials": [
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/kumarsatyasriram/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/kumarram27",
+      "icon": "github"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:kumar27.dev@gmail.com",
+      "icon": "mail"
+    }
+  ]
+}

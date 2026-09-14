@@ -1,0 +1,22 @@
+{
+  "name": "Boppana Kumar Satya Sri Ram | Portfolio",
+  "short_name": "kumarram27",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Portfolio of Boppana Kumar Satya Sri Ram, Full-Stack Software Engineer & Founding Engineer.",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
