@@ -1,7 +1,7 @@
 import BlogImage from "@/components/BlogImage";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import MDXContent from "@/components/MDXContent";
-import ViewCounter from "@/components/ViewCounter";
+// import ViewCounter from "@/components/ViewCounter";
 import { Badge } from "@/components/ui/Badge";
 import { Separator } from "@/components/ui/Separator";
 import { getPostBySlug, getPosts } from "@/lib/posts";
@@ -12,7 +12,7 @@ import {
   CalendarIcon,
   ClockIcon,
   Edit3Icon,
-  EyeIcon,
+  // EyeIcon,
   UsersIcon,
 } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -142,7 +142,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
                   className="hidden h-4 sm:block"
                 />
 
-                {/* Views */}
+                {/* Views (Disabled / Commented out - views backend is not active) */}
+                {/* 
                 <div className="flex items-center gap-1.5">
                   <EyeIcon className="h-4 w-4" />
                   <ViewCounter slug={slug} initialCount={initialViewCount} />
@@ -152,6 +153,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
                   orientation="vertical"
                   className="hidden h-4 sm:block"
                 />
+                */}
 
                 {/* Published date */}
                 <div className="flex items-center gap-1.5">

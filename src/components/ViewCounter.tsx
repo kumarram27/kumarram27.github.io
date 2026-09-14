@@ -19,6 +19,8 @@ export default function ViewCounter({ slug, initialCount }: Props) {
     let isMounted = true;
     const controller = new AbortController();
 
+    // Fetch call to /api/views commented out (views backend is inactive)
+    /*
     const incrementViews = async () => {
       try {
         const res = await fetch(`/api/views/${slug}`, {
@@ -44,6 +46,7 @@ export default function ViewCounter({ slug, initialCount }: Props) {
     };
 
     incrementViews();
+    */
 
     return () => {
       isMounted = false;

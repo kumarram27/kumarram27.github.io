@@ -21,11 +21,11 @@ interface SkillItem {
   image?: string;
   lucideIcon?: React.ReactNode;
   category:
-  | "Languages"
-  | "Frontend"
-  | "Backend & APIs"
-  | "Data & Storage"
-  | "Infrastructure & Tools";
+    | "Languages"
+    | "Frontend"
+    | "Backend & APIs"
+    | "Data & Storage"
+    | "Infrastructure & Tools";
 }
 
 const skillsData: SkillItem[] = [
@@ -154,7 +154,7 @@ export default function Skills() {
                       delay: catIndex * 0.08 + index * 0.03,
                     }}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className="group flex items-center gap-2.5 rounded-xl border border-border/80 bg-card/80 px-3 py-2 text-xs font-medium text-foreground shadow-xs backdrop-blur-xs transition-colors hover:border-primary/40 hover:bg-accent/50 dark:border-white/10 dark:bg-card/90 dark:hover:border-white/25 dark:hover:bg-accent/40"
+                    className="shadow-xs backdrop-blur-xs group flex items-center gap-2.5 rounded-xl border border-border/80 bg-card/80 px-3 py-2 text-xs font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-accent/50 dark:border-white/10 dark:bg-card/90 dark:hover:border-white/25 dark:hover:bg-accent/40"
                   >
                     <div className="relative flex size-5 items-center justify-center">
                       {skill.image ? (

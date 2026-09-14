@@ -1,3 +1,7 @@
+import { NextResponse } from "next/server";
+
+// Chatbot API route (Disabled / Commented out - backend is not in use)
+/*
 import { createStreamDataTransformer, type Message } from "ai";
 
 export const runtime = "edge";
@@ -87,4 +91,12 @@ export async function POST(req: Request) {
       },
     );
   }
+}
+*/
+
+export async function POST() {
+  return NextResponse.json(
+    { message: "Chat API is currently disabled." },
+    { status: 404 },
+  );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ChatToggle from "./ChatToggle";
+// import ChatToggle from "./ChatToggle";
 import ThemeToggle from "./ThemeToggle";
 
 import routesData from "@/data/routes.json";

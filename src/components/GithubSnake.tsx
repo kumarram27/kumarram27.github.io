@@ -19,7 +19,7 @@ export default function GithubSnake() {
         />
       </div>
 
-      <div className="relative flex w-full items-center justify-center overflow-x-auto rounded-2xl border border-border/80 bg-card p-3 sm:p-6 shadow-sm backdrop-blur-sm transition-all hover:border-primary/30 dark:border-white/10 dark:bg-card/90 dark:hover:border-white/20">
+      <div className="relative flex w-full items-center justify-center overflow-x-auto rounded-2xl border border-border/80 bg-card p-3 shadow-sm backdrop-blur-sm transition-all hover:border-primary/30 sm:p-6 dark:border-white/10 dark:bg-card/90 dark:hover:border-white/20">
         {/* Dark Mode Snake Animation */}
         <img
           src="https://raw.githubusercontent.com/kumarram27/kumarram27/output/snake-dark.svg"

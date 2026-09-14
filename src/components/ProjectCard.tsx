@@ -16,7 +16,7 @@ export function ProjectCard({ project }: Props) {
   const { name, href, description, image, video, tags, links } = project;
 
   return (
-    <CardContainer containerClassName="w-full py-2" className="w-full h-full">
+    <CardContainer containerClassName="w-full py-2" className="h-full w-full">
       <CardBody className="group/card relative flex h-full flex-col justify-between rounded-2xl border border-border/80 bg-card p-5 text-card-foreground shadow-sm transition-shadow duration-300 hover:shadow-xl dark:border-white/10 dark:bg-card/95 dark:hover:border-white/20 dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]">
         <div>
           {/* Media Header (Video or Image) */}
@@ -33,7 +33,11 @@ export function ProjectCard({ project }: Props) {
                 />
               </div>
             ) : image ? (
-              <Link href={href || image} target="_blank" className="block w-full">
+              <Link
+                href={href || image}
+                target="_blank"
+                className="block w-full"
+              >
                 <div className="relative h-44 w-full overflow-hidden rounded-xl bg-muted/40">
                   <ImageWithSkeleton
                     src={image}

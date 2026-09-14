@@ -27,7 +27,7 @@ const cardData: Card[] = [
     id: 1,
     url: "/img/1.jpg",
     alt: "Kumar Satya Sri Ram",
-  }
+  },
 ];
 
 const SwipeCards = ({ className }: SwipeCardsProps) => {
@@ -109,7 +109,7 @@ const CardItem = ({
 
   return (
     <motion.div
-      className="group absolute h-[280px] w-[210px] origin-bottom overflow-hidden rounded-2xl border border-border/80 bg-card shadow-lg transition-colors hover:cursor-grab active:cursor-grabbing dark:border-white/20 dark:bg-zinc-900 sm:h-[320px] sm:w-[240px]"
+      className="group absolute h-[280px] w-[210px] origin-bottom overflow-hidden rounded-2xl border border-border/80 bg-card shadow-lg transition-colors hover:cursor-grab active:cursor-grabbing sm:h-[320px] sm:w-[240px] dark:border-white/20 dark:bg-zinc-900"
       style={{
         gridRow: 1,
         gridColumn: 1,

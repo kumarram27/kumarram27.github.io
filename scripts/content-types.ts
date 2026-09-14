@@ -8,12 +8,7 @@ export interface ContentChunk {
   content: string;
   metadata?: {
     contentType?:
-      | "project"
-      | "career"
-      | "education"
-      | "page"
-      | "social"
-      | "navigation";
+      "project" | "career" | "education" | "page" | "social" | "navigation";
     enrichment?: string[];
   };
 }

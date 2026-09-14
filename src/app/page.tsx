@@ -10,8 +10,8 @@ import SwipeCards from "@/components/SwipeCards";
 import { Button } from "@/components/ui/Button";
 import { getPosts } from "@/lib/posts";
 import {
-  ArrowDown,
-  ArrowDownRight,
+  // ArrowDown,
+  // ArrowDownRight,
   ArrowRightIcon,
   FileDown,
 } from "lucide-react";
@@ -22,6 +22,7 @@ import homeContent from "@/data/home.json";
 
 const LIMIT = 2; // show 2 featured projects on main page
 
+/*
 async function RecentPosts() {
   const posts = (await getPosts())
     .filter((post) => !post.draft)
@@ -29,6 +30,7 @@ async function RecentPosts() {
   if (posts.length === 0) return null;
   return <Posts posts={posts} />;
 }
+*/
 
 export default function Home() {
   return (
@@ -42,11 +44,12 @@ export default function Home() {
             {homeContent.introduction.greeting}
           </h1>
 
-          <p className="mt-2 text-sm font-medium sm:text-base text-muted-foreground">
-            {homeContent.introduction.role} from {homeContent.introduction.location}
+          <p className="mt-2 text-sm font-medium text-muted-foreground sm:text-base">
+            {homeContent.introduction.role} from{" "}
+            {homeContent.introduction.location}
           </p>
 
-          <p className="mt-4 max-w-md text-balance text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 max-w-md text-balance text-sm leading-relaxed sm:text-base">
             {homeContent.introduction.description}
           </p>
 
@@ -95,7 +98,7 @@ export default function Home() {
 
       {/* Featured Projects Section (3D Tilt Cards) */}
       <section className="flex flex-col gap-8">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <div>
             <h2 className="title text-2xl sm:text-3xl">featured projects</h2>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -129,7 +132,7 @@ async function RecentPostsWrapper() {
 
   return (
     <section className="flex flex-col gap-8">
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <h2 className="title text-2xl sm:text-3xl">recent posts</h2>
         <LinkWithIcon
           href="/blog"

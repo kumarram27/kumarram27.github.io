@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+// View counter API route (Disabled / Commented out - backend is not in use)
+/*
 const TACOS_API_URL = process.env.TACOS_API_URL || "http://localhost:8000";
 const TACOS_API_KEY = process.env.TACOS_API_KEY || "";
 
@@ -46,4 +48,9 @@ export async function POST(
       { status: 500 },
     );
   }
+}
+*/
+
+export async function POST() {
+  return NextResponse.json({ views: 0 });
 }
