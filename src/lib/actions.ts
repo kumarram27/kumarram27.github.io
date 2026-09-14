@@ -1,11 +1,5 @@
-"use server";
-
-import ContactFormEmail from "@/components/email/ContactFormEmail";
-import { Resend } from "resend";
 import { z } from "zod";
 import { ContactFormSchema } from "./schemas";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 
@@ -16,26 +10,15 @@ export async function sendEmail(data: ContactFormInputs) {
     return { error: result.error.format() };
   }
 
-  try {
+  // On static export (GitHub Pages), open mail client with prefilled details
+  if (typeof window !== "undefined") {
     const { name, email, message } = result.data;
-    const { data, error } = await resend.emails.send({
-      from:
-        process.env.CONTACT_EMAIL_FROM || "Portfolio <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL_TO || "kumar27.dev@gmail.com",
-      replyTo: [email],
-      cc: [email],
-      subject: `New message from ${name}!`,
-      text: `Name:\n${name}\n\nEmail:\n${email}\n\nMessage:\n${message}`,
-      // react: ContactFormEmail({ name, email, message }),
-    });
-
-    if (!data || error) {
-      console.error(error?.message);
-      throw new Error("Failed to send email!");
-    }
-
-    return { success: true };
-  } catch (error) {
-    return { error };
+    const subject = encodeURIComponent(`Portfolio Message from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    );
+    window.location.href = `mailto:kumar27.dev@gmail.com?subject=${subject}&body=${body}`;
   }
+
+  return { success: true };
 }

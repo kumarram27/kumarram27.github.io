@@ -17,13 +17,14 @@ import {
 } from "lucide-react";
 import { notFound } from "next/navigation";
 
-export const revalidate = 600;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const posts = await getPosts(10);
-  const slugs = posts.map((post) => ({ slug: post.slug }));
-
-  return slugs;
+  if (posts.length === 0) {
+    return [{ slug: "welcome" }];
+  }
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
