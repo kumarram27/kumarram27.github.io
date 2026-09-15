@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Socials from "@/components/Socials";
 import SwipeCards from "@/components/SwipeCards";
+import ContributionShooter from "@/components/ContributionShooter";
 import { Button } from "@/components/ui/Button";
 import { getPosts } from "@/lib/posts";
 import {
@@ -115,8 +116,16 @@ export default function Home() {
         <Projects limit={LIMIT} />
       </section>
 
+      <section className="max-w-5xl mx-auto space-y-6">
+        <h2 className="text-3xl font-bold text-center">Interactive Contribution Arcade</h2>
+        <p className="text-center text-zinc-400 text-sm">
+          Blast through real commit history. Press Enter to play!
+        </p>
+        <ContributionShooter username="kumarram27" />
+      </section>
+
       {/* GitHub Snake Contribution Activity */}
-      <GithubSnake />
+      {/* <GithubSnake /> */}
 
       {/* Recent Posts Section */}
       <Suspense fallback={<PostsSkeleton rows={2} />}>
