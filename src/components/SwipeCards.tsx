@@ -1,12 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  animate,
-  motion,
-  useMotionValue,
-  useTransform,
-} from "framer-motion";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -94,14 +89,9 @@ const CardItem = ({
 
   const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
 
-  const opacity = useTransform(
-    x,
-    [-100, 0, 100],
-    [0, 1, 0],
-  );
+  const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0]);
 
-  const isFront =
-    id === cards[cards.length - 1]?.id;
+  const isFront = id === cards[cards.length - 1]?.id;
 
   const rotate = useTransform(() => {
     const offset = isFront ? 0 : id % 2 ? 6 : -6;
@@ -133,8 +123,7 @@ const CardItem = ({
     info: { offset: { x: number } },
   ) => {
     if (Math.abs(info.offset.x) > 100) {
-      const direction =
-        info.offset.x > 0 ? 1 : -1;
+      const direction = info.offset.x > 0 ? 1 : -1;
 
       animate(x, direction * 180, {
         type: "spring",
@@ -183,15 +172,9 @@ const CardItem = ({
           : undefined,
       }}
       animate={{
-        scale: isFront
-          ? 1
-          : Math.max(0.88, 0.95 - depth * 0.05),
+        scale: isFront ? 1 : Math.max(0.88, 0.95 - depth * 0.05),
       }}
-      drag={
-        isFront && !isAutoSwiping
-          ? "x"
-          : false
-      }
+      drag={isFront && !isAutoSwiping ? "x" : false}
       dragConstraints={{
         left: -150,
         right: 150,

@@ -116,9 +116,11 @@ export default function Home() {
         <Projects limit={LIMIT} />
       </section>
 
-      <section className="max-w-5xl mx-auto space-y-6">
-        <h2 className="text-3xl font-bold text-center">Interactive Contribution Arcade</h2>
-        <p className="text-center text-zinc-400 text-sm">
+      <section className="mx-auto max-w-5xl space-y-6">
+        <h2 className="text-center text-3xl font-bold">
+          Interactive Contribution Arcade
+        </h2>
+        <p className="text-center text-sm text-zinc-400">
           Blast through real commit history. Press Enter to play!
         </p>
         <ContributionShooter username="kumarram27" />
