@@ -1,0 +1,19 @@
+{
+  "introduction": {
+    "greeting": "hi, I'm Kumar. 👋",
+    "name": "Boppana Kumar Satya Sri Ram",
+    "role": "Full-Stack Software Engineer",
+    "location": "India 🇮🇳",
+    "description": "Full-Stack Engineer building scalable web apps, real-time backend systems, and device infrastructure with Next.js, FastAPI, and Redis.",
+    "chatPrompt": "Have a question? Feel free to ask",
+    "escalation": {
+      "text": "Connect with me directly on",
+      "linkText": "LinkedIn",
+      "suffix": "anytime."
+    }
+  },
+  "escalationLink": {
+    "href": "https://www.linkedin.com/in/kumarsatyasriram",
+    "title": "LinkedIn Profile"
+  }
+}
